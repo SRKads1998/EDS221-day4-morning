@@ -48,7 +48,8 @@ animal_age(animal = "cow", age = 8)
 # write an updated version of code w/ error
 
 animal_age_stop <- function(animal, age){
-  if (animal %in% c("dog", "goat")) {
+  
+  if (!animal %in% c("dog", "goat")) {
     stop("Animal must be dog or goat") }
   if (is.numeric(age) = FALSE) {
     stop("The age must be a number")
@@ -58,4 +59,17 @@ animal_age_stop <- function(animal, age){
   }
 }
 
+# Functions meets for loops 
 
+# all the dataframes in the function are called df ----> argument df
+
+df_means <- function(df){
+for (i in 1:ncol(df)) {
+  if(is.numeric(df[i]) {
+  column_name <- colnames(df[[i]]))
+  col_mean <- mean(df[[i]], na.rm = TRUE)
+  print(paste("The mean value of", column_name, "is", col_mean))
+  }
+  }
+  }}
+df_means(df = palmerpenguins::penguins)]
